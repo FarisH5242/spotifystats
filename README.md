@@ -1,4 +1,4 @@
-# Soundprint
+# spotifystats
 
 A browser-based playlist analytics dashboard. Open index.html or deploy main / (root) with GitHub Pages.
 
