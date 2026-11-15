@@ -1,15 +1,34 @@
 # TrackSpotify
 
-A browser-based playlist analytics dashboard. Open index.html or deploy main / (root) with GitHub Pages.
+Independent music analytics and playlist intelligence web application.
 
-## Data import
-Use comma-separated CSV with title and artist columns. Optional fields: album, genre, year, duration_ms, bpm, energy, danceability, valence, acousticness, instrumentalness. Audio features should use 0–1 values. Demo data is fictional; missing audio features are not inferred. Files are processed locally in the browser.
+**Live demo:** https://farish5242.github.io/spotifystats/
 
-## v0.3
-Spotify OAuth with PKCE, permitted playlist import, artwork, artist genre enrichment (up to 40 unique artists per import, subject to API access), diversity and playlist insights. Mood requires imported energy and valence. The GitHub Pages URL is unchanged. Spotify credentials and tokens must never be committed.
+## Features
+- Spotify OAuth 2.0 PKCE and playlist import; CSV import/export.
+- Artist, genre, decade and available audio-feature analytics; artwork and track links.
+- Wrapped PNG cards, CSV battles, artist profiles, discovery search links and session collection.
+- Artist relationship graph, heuristic Music DNA, manual local snapshots, smart CSV builder and HTML reports.
+- Responsive dashboard and founder About tab.
 
-## v0.4
-Shareable PNG Wrapped card, side-by-side CSV playlist comparisons, Spotify search-based discovery, artist profiles, release-year timeline, session-local imported collection, and clickable artist/genre/decade filters. Collection is limited to manually imported playlists, not listening history. Discovery links are not automated recommendations.
+## Run locally
+Serve the repository with `python3 -m http.server 8000` and open http://localhost:8000 for CSV and demo features. Spotify login uses the registered production redirect URI.
 
-## v0.5
-Interactive artist network (top 16 current artists, collaboration and session playlist co-occurrence), heuristic Music DNA, opt-in local playlist snapshots (50 total, unique track changes), current-playlist filter builder with CSV export, and standalone HTML analytics reports. No server, automatic tracking, Spotify playlist write access or new OAuth scopes. CSV history matches by filename-derived playlist name. Live browser tests remain outstanding.
+## Spotify setup
+Create a Spotify developer app, register https://farish5242.github.io/spotifystats/ as the exact redirect URI, and enter its Client ID in the dashboard. Never commit a client secret or access token. Access depends on Spotify app permissions. Artist enrichment is capped at 40 unique artists; audio features are not fetched.
+
+## Architecture
+- index.html: dashboard, CSV parser, core analytics and navigation.
+- analytics.js: artwork and diversity insights.
+- spotify.js: authentication and API import.
+- features.js: sharing and exploration.
+- intelligence.js: network, DNA, snapshots, builder and reports.
+
+## Browser tests
+Run `npm install`, `npx playwright install chromium`, then `npm test`. Tests cover demo rendering, About navigation, mobile width, intelligence views, Wrapped, CSV import, builder filters and local history. Live Spotify authentication and downloads require separate manual checks. Test execution has not yet been verified.
+
+## Privacy and limits
+No backend or automatic tracking. CSV files are processed locally; opt-in snapshots persist in browser storage (up to 50). The collection is session-local. Discovery is search-based, not a recommendation model. TrackSpotify is independent and not endorsed by Spotify.
+
+## Founder
+Faris — Founder of TrackSpotify. Contact: farisham10@gmail.com.
