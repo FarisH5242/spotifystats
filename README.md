@@ -32,3 +32,6 @@ No backend or automatic tracking. CSV files are processed locally; opt-in snapsh
 
 ## Founder
 Faris — Founder of TrackSpotify. Contact: farisham10@gmail.com.
+
+## v0.6 — Studio
+Persistent opt-in local playlist library, universal search and favorites, random filtered mix generator, overlap matrix (first 20 saved playlists), track notes and ratings, collection goals, metadata coverage, JSON backup export and Studio data deletion. Saved playlists are keyed by name; track identity is title and artist. Browser storage is not cloud storage. JSON restoration and Spotify write access are not implemented.
