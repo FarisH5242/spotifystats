@@ -1,4 +1,4 @@
-# TrackSpotify
+# SpotifyStats
 
 Independent music analytics and playlist intelligence web application.
 
@@ -28,10 +28,10 @@ Create a Spotify developer app, register https://farish5242.github.io/spotifysta
 Run `npm install`, `npx playwright install chromium`, then `npm test`. Tests cover demo rendering, About navigation, mobile width, intelligence views, Wrapped, CSV import, builder filters and local history. Live Spotify authentication and downloads require separate manual checks. Test execution has not yet been verified.
 
 ## Privacy and limits
-No backend or automatic tracking. CSV files are processed locally; opt-in snapshots persist in browser storage (up to 50). The collection is session-local. Discovery is search-based, not a recommendation model. TrackSpotify is independent and not endorsed by Spotify.
+No backend or automatic tracking. CSV files are processed locally; opt-in snapshots persist in browser storage (up to 50). The collection is session-local. Discovery is search-based, not a recommendation model. SpotifyStats is independent and not endorsed by Spotify.
 
 ## Founder
-Faris — Founder of TrackSpotify. Contact: farisham10@gmail.com.
+Faris — Founder of SpotifyStats. Contact: farisham10@gmail.com.
 
 ## v0.6 — Studio
 Persistent opt-in local playlist library, universal search and favorites, random filtered mix generator, overlap matrix (first 20 saved playlists), track notes and ratings, collection goals, metadata coverage, JSON backup export and Studio data deletion. Saved playlists are keyed by name; track identity is title and artist. Browser storage is not cloud storage. JSON restoration and Spotify write access are not implemented.
